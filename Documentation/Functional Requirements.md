@@ -67,29 +67,43 @@ US-06 As a player, I want power-ups to be balanced so that neither side becomes 
 
 3.1 Functional Requirements  
 
-FR-: The system shall manage scene creation, loading, and destruction using a centralized scene manager. 
+FR-1: The system shall manage scene creation, loading, and destruction using a centralized scene manager. 
 
-FR-: The system shall ensure that only the active scene is rendered and receives input. 
+FR-2: The system shall ensure that only the active scene is rendered and receives input. 
 
-FR-: When the game starts, the system shall display a main menu containing the title and available actions. 
+FR-3: When the game starts, the system shall display a main menu containing the title and available actions. 
 
-FR-: When the user selects the “Info” button, the system shall display an informational modal overlay. 
+FR-4: When the user selects the “Info” button, the system shall display an informational modal overlay. 
 
-FR-: When the user selects the “Settings” button, the system shall display the settings modal overlay. 
+FR-5: When the user selects the “Settings” button, the system shall display the settings modal overlay. 
 
-FR-: When the user selects the “Start” button, the system shall transition from the main menu to the waiting lobby scene. 
+FR-6: When the user selects the “Start” button, the system shall transition from the main menu to the waiting lobby scene. 
 
-FR-: When a player joins a lobby, the system shall assign them a unique player ID and initial team state  
+FR-7: When a player joins a lobby, the system shall assign them a unique player ID and initial team state  
 
-FR-: When the user presses directional input, the system shall update player position on the client and synchronize movement via WebSocket updates.  
+FR-8: When the user presses directional input, the system shall update player position on the client and synchronize movement via WebSocket updates.  
 
-FR-: When movement updates are received from the server, the client shall render updated positions immediately.  
+FR-09: When the user presses directional input, the system shall update player position on the client and synchronize movement via WebSocket updates.
+  
+FR-10: When movement updates are received from the server, the client shall render updated positions immediately.
 
-FR-: When a player collects a power-up, the system shall apply the corresponding effect  
+FR-11: The system shall be accessible via the official production domain infectionx.io
 
-FR-: When a player is converted, the system shall broadcast the updated status to all connected players  
+FR-12: The system shall provide an internal map-editing mode allowing developers to create, move, resize, rotate, and delete platform objects.
 
-FR-: When a match ends, the system shall determine the winning team based on number of players per team  
+FR-13: The system shall keep the player centered on screen by moving the camera container while clamping the view to the boundaries of the map.
+
+FR-14: The system shall support the creation, rendering, and management of sprite-based objects
+
+FR-15: The system shall support rendering sprite animations for characters, enemies, and environmental effects.
+
+FR-16: The system shall support physics-based interactions, including collision detection between the player, platforms, and other game objects
+
+FR-17: When a player collects a power-up, the system shall apply the corresponding effect  
+
+FR-18: When a player is converted, the system shall broadcast the updated status to all connected players  
+
+FR-19: When a match ends, the system shall determine the winning team based on number of players per team  
 
  
 
