@@ -7,14 +7,17 @@ import { showSettingsModal } from "../ui/SettingsModal";
 import { ModalManager } from "../ui/ModalManager";
 import { SceneManager } from "../core/SceneManager";
 import { WaitingLobbyScene } from "./WaitingLobbyScene";
+import { DemoMapScene } from "./DemoMapScene";
 
 export class MainMenuScene extends BaseScene {
-    private background!: Sprite;
-    private title!: Text;
+    private background?: Sprite;
+    private title?: Text;
 
-    private infoButton!: Container;
-    private startButton!: Container;
-    private settingsButton!: Container;
+    private infoButton?: Container;
+    private startButton?: Container;
+    private settingsButton?: Container;
+
+    private resizeHandler = () => this.layout()
 
     constructor() {
         super();
@@ -29,11 +32,11 @@ export class MainMenuScene extends BaseScene {
         this.createButtons();
         this.layout();
 
-        window.addEventListener("resize", () => this.layout());
+        window.addEventListener("resize", this.resizeHandler);
     }
 
     private async loadBackground() {
-        const texture = await Assets.load("/assets/postapocalypse2.png");
+        const texture = await Assets.load("/assets/Maps/postapocalypse2.png");
         this.background = new Sprite(texture);
         this.background.anchor.set(0);
         this.background.zIndex = 0;
@@ -68,13 +71,24 @@ export class MainMenuScene extends BaseScene {
 
     private createButtons() {
         this.infoButton = createTextButton("INFO", () => showInfoModal());
-        this.startButton = createTextButton("START", () => {SceneManager.changeScene(new WaitingLobbyScene());});
+        this.startButton = createTextButton("START", () => {SceneManager.changeScene(new DemoMapScene());});
         this.settingsButton = createTextButton("SETTINGS", () => showSettingsModal());
 
         this.addChild(this.infoButton, this.startButton, this.settingsButton);
     }
 
     private layout() {
+        if (
+            !this.background ||
+            !this.title ||
+            !this.startButton ||
+            !this.infoButton ||
+            !this.settingsButton ||
+            !this.background.texture
+        ) {
+            return;
+        }
+
         const w = App.pixi.renderer.width;
         const h = App.pixi.renderer.height;
 
@@ -102,5 +116,10 @@ export class MainMenuScene extends BaseScene {
 
         this.settingsButton.x = centerX + gap;
         this.settingsButton.y = baseY;
+    }
+    override destroyScene() {
+        // remove resize listener so it stops calling layout()
+        window.removeEventListener("resize", this.resizeHandler);
+        super.destroyScene();
     }
 }
