@@ -10,6 +10,7 @@
     "dev": "vite"
   },
   "dependencies": {
+    "matter-js": "^0.20.0",
     "pixi.js": "^8.14.2"
   },
   "devDependencies": {

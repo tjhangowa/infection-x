@@ -1,4 +1,6 @@
-import { Graphics } from "pixi.js";
+import * as PIXI from "pixi.js";
+import { Body } from "matter-js";
+import { Terrain } from "./terrain/terrain";
 
 export interface PlatformConfig {
   x: number;      // world-space center X
@@ -9,43 +11,49 @@ export interface PlatformConfig {
   rotation?: number;
 }
 
-export class Platform extends Graphics {
-  config: PlatformConfig;
+export class Platform extends Terrain {
+  public config: PlatformConfig;
+
   private selected = false;
 
   constructor(cfg: PlatformConfig) {
-    super();
-    this.config = { ...cfg, rotation: cfg.rotation ?? 0 };
+    super(PIXI.Texture.WHITE, cfg.x, cfg.y, cfg.width, cfg.height);
 
+    // Ensure we always have a rotation value
+    this.config = { rotation: 0, ...cfg };
+
+    this.sprite.tint = this.config.color;
+  
     this.refreshFromConfig();
   }
 
   setSelected(selected: boolean) {
     this.selected = selected;
-    this.redraw();
+    this.applyVisualState();
   }
 
-  /** Call after changing config.width/height/x/y if needed */
+  /** Call after changing config.width/height/x/y/rotation if needed */
   refreshFromConfig() {
-    this.x = this.config.x;
-    this.y = this.config.y;
-    this.rotation = this.config.rotation ?? 0;
-    this.redraw();
+    const { x, y, rotation = 0 } = this.config;
+
+    // Update display object
+    this.position.set(x, y);
+    this.rotation = rotation;
+
+    // Update physics body transform
+    Body.setPosition(this.body, { x, y });
+    Body.setAngle(this.body, rotation);
+
+    this.applyVisualState();
   }
 
-  private redraw() {
-    this.clear();
-
-    const { width, height, color } = this.config;
-    const halfW = width / 2;
-    const halfH = height / 2;
-
+  private applyVisualState() {
     if (this.selected) {
-      // Slight outline when selected
-      this.rect(-halfW - 3, -halfH - 3, width + 6, height + 6).fill(0xffff00);
-      this.rect(-halfW, -halfH, width, height).fill(color);
+      this.sprite.tint = 0xffff00;
+      this.sprite.alpha = 0.9;
     } else {
-      this.rect(-halfW, -halfH, width, height).fill(color);
+      this.sprite.tint = this.config.color;
+      this.sprite.alpha = 1.0;
     }
   }
 }

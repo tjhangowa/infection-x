@@ -8,6 +8,7 @@ import { ModalManager } from "../ui/ModalManager";
 import { SceneManager } from "../core/SceneManager";
 import { WaitingLobbyScene } from "./WaitingLobbyScene";
 import { DemoMapScene } from "./DemoMapScene";
+import { GameMapScene } from "./GameMapScene";
 
 export class MainMenuScene extends BaseScene {
     private background?: Sprite;
@@ -71,7 +72,7 @@ export class MainMenuScene extends BaseScene {
 
     private createButtons() {
         this.infoButton = createTextButton("INFO", () => showInfoModal());
-        this.startButton = createTextButton("START", () => {SceneManager.changeScene(new DemoMapScene());});
+        this.startButton = createTextButton("START", () => {SceneManager.changeScene(new GameMapScene());});
         this.settingsButton = createTextButton("SETTINGS", () => showSettingsModal());
 
         this.addChild(this.infoButton, this.startButton, this.settingsButton);
