@@ -1,0 +1,44 @@
+{"frames": {
+
+"syringe2(Layer 1) _0001 (1).png":
+{
+	"frame": {"x":0,"y":0,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"syringe2(Layer 1) _0002 (1).png":
+{
+	"frame": {"x":252,"y":0,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"syringe2(Layer 1) _0003 (1).png":
+{
+	"frame": {"x":0,"y":252,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"syringe2(Layer 1) _0004 (1).png":
+{
+	"frame": {"x":252,"y":252,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "curepowerup.png",
+	"format": "RGBA8888",
+	"size": {"w":504,"h":504},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2d2b4a66505afdef35d44a07b992bce2:bd5729f7f5f8c582973cfadfd430a878:39555888b71423f01d579cbea0dcc1e6$"
+}
+}
