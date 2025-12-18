@@ -16,13 +16,12 @@ export class Platform extends Terrain {
 
   private selected = false;
 
-  constructor(cfg: PlatformConfig) {
-    super(PIXI.Texture.WHITE, cfg.x, cfg.y, cfg.width, cfg.height);
+  constructor(cfg: PlatformConfig,texture: PIXI.Texture) {
+    super(texture, cfg.x, cfg.y, cfg.width, cfg.height);
+    this.tag = "ground"
 
     // Ensure we always have a rotation value
     this.config = { rotation: 0, ...cfg };
-
-    this.sprite.tint = this.config.color;
   
     this.refreshFromConfig();
   }
@@ -35,6 +34,9 @@ export class Platform extends Terrain {
   /** Call after changing config.width/height/x/y/rotation if needed */
   refreshFromConfig() {
     const { x, y, rotation = 0 } = this.config;
+
+    // Apply size first (so arrow-key resizing updates sprite + body)
+    this.setSize(this.config.width, this.config.height);
 
     // Update display object
     this.position.set(x, y);

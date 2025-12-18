@@ -1,4 +1,4 @@
-import { Container, Sprite, Assets, Graphics, Ticker, FederatedPointerEvent } from "pixi.js";
+import { Container, Sprite, Assets, Graphics, Ticker, FederatedPointerEvent, Texture } from "pixi.js";
 import { BaseScene } from "./BaseScene";
 import { App } from "../core/app";
 import { Platform } from "../objects/Platform"
@@ -39,6 +39,8 @@ export class DemoMapScene extends BaseScene {
     private resizeHandler = () => this.layout();
     private tickerFn = (ticker: Ticker) => this.update(ticker.deltaTime);
 
+    private platformTexture!: Texture;
+
     constructor() {
         super();
     }
@@ -54,6 +56,7 @@ export class DemoMapScene extends BaseScene {
         this.mapSprite.anchor.set(0); // top-left
         this.world.addChild(this.mapSprite);
 
+        this.platformTexture = await Assets.load("/assets/Platforms/platform_grass.png");
         await this.loadPlatformConfig();
 
         this.physicsEngine = Engine.create({
@@ -289,16 +292,18 @@ export class DemoMapScene extends BaseScene {
     private createPlatforms() {
       const mapW = this.mapSprite.texture.width;
       const mapH = this.mapSprite.texture.height;
+      const tileH = this.platformTexture.height;
+
     
       for (const cfg of this.platformConfigData) {
         const p = new Platform({
           x: cfg.xRatio * mapW,
           y: cfg.yRatio * mapH,
           width: cfg.wRatio * mapW,
-          height: cfg.hRatio * mapH,
+          height: tileH,
           color: cfg.color,
           rotation:cfg.rotation ?? 0,
-        });
+        }, this.platformTexture);
         // editor interaction
         p.eventMode = "static";
         p.cursor = "pointer";
@@ -372,16 +377,22 @@ export class DemoMapScene extends BaseScene {
         // convert screen center to world coords
         const worldPos = this.world.toLocal({ x: screenW / 2, y: screenH / 2 } as any);
 
-        const width = 20;
-        const height = 20;
+        const tileH = this.platformTexture?.height ?? 32;
 
-        const p = new Platform({
+        const width = 64;   // sensible default for editor-created platforms
+        const height = tileH;
+
+        const p = new Platform(
+          {
             x: worldPos.x,
             y: worldPos.y,
             width,
             height,
-            color: 0x8888ff,
-        });
+            color: 0xffffff,
+            rotation: 0,
+          },
+          this.platformTexture,
+        );
 
         p.eventMode = "static";
         p.cursor = "pointer";

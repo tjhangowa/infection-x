@@ -1,69 +1,94 @@
-import Matter, { Engine, Events } from "matter-js";
-import { Player } from "./playerDemoActor";
-import { direction } from "./sharedTypes";
+import Matter, { Engine, Events, Body } from "matter-js";
 import { Ground } from "../../objects/terrain/ground";
 import { Wall } from "../../objects/terrain/wall";
+import { PlayerActor } from "../../actors/PlayerActor";
 
-export class collisionManger {
-    private bodyToClass = new Map<Matter.Body, any>();
+type Collidable = PlayerActor | Ground | Wall;
 
-    players: Player[] = []
+export class CollisionManager {
+  private bodyToObject = new Map<Body, Collidable>();
+  private engine: Engine;
 
-    private engine: Engine;
+  constructor(engine: Engine) {
+    this.engine = engine;
 
-    constructor(engine : Engine) {
-        this.engine = engine;
-        Events.on(this.engine, "collisionActive", this.handleCollisions.bind(this));
-        Events.on(this.engine, "collisionEnd", this.handleCollisionEnd.bind(this));
+    // 1. Reset flags every frame
+    Events.on(this.engine, "beforeUpdate", this.resetFlags);
+
+    // 2. Listen for BOTH Start and Active
+    // (Sometimes 'Active' skips a frame if the body is sleepy, Start helps catch the initial landing)
+    Events.on(this.engine, "collisionStart", this.handleCollisions);
+    Events.on(this.engine, "collisionActive", this.handleCollisions);
+  }
+
+  registerObject(obj: Collidable) {
+    this.bodyToObject.set(obj.body, obj);
+  }
+
+  private resetFlags = () => {
+    for (const obj of this.bodyToObject.values()) {
+      if (obj instanceof PlayerActor) {
+        obj.isGrounded = false;
+        obj.isTouchingWall = false;
+      }
+    }
+  };
+
+  private handleCollisions = (event: Matter.IEventCollision<Matter.Engine>) => {
+    for (const pair of event.pairs) {
+      const a = this.bodyToObject.get(pair.bodyA);
+      const b = this.bodyToObject.get(pair.bodyB);
+
+      if (!a || !b) continue;
+
+      const normal = pair.collision.normal;
+
+      // Handle Player collisions (Order Independent)
+      if (a instanceof PlayerActor) {
+        this.resolvePlayerCollision(a, b, { x: -normal.x, y: -normal.y });
+      } else if (b instanceof PlayerActor) {
+        this.resolvePlayerCollision(b, a, normal);
+      }
+    }
+  };
+
+  private resolvePlayerCollision(
+    player: PlayerActor,
+    other: Collidable,
+    normal: Matter.Vector,
+  ) {
+    // We only care if 'other' has a tag (is Terrain)
+    if (!("tag" in other)) return;
+
+    // 1. POSITION CHECK (Bulletproof)
+    // In Pixi/Matter, lower Y value = Higher up on screen.
+    // If Player Y < Other Y, the player is physically ON TOP of the object.
+    const isPlayerAbove = player.body.position.y < other.body.position.y;
+
+    // 2. VERTICAL CHECK
+    // We don't care if it's 1.0 or -1.0, just that it's a vertical surface
+    const isVerticalCollision = Math.abs(normal.y) > 0.5;
+
+    // --- DEBUG LOG (Keep this until it works) ---
+    // console.log(`HIT: ${other.tag} | Above: ${isPlayerAbove} | Vert: ${isVerticalCollision} | VY: ${player.body.velocity.y.toFixed(2)}`);
+
+    // 1. GROUND CHECK
+    if (
+      (other.tag === "ground" || other.tag === "platform") &&
+      isPlayerAbove && // ✅ Player is on top
+      isVerticalCollision && // ✅ Surface is flat
+      player.body.velocity.y >= -5 // ✅ Not moving up rapidly
+    ) {
+      player.isGrounded = true;
+      // console.log("✅ GROUNDED TRUE");
     }
 
-    registerObject(obj: {body: Matter.Body}) {
-        this.bodyToClass.set(obj.body, obj);
-        if (obj instanceof Player) {
-            this.players.push(obj);
-        }
+    // 2. WALL CHECK
+    if (
+      (other.tag === "wall" || other.tag === "ground") &&
+      Math.abs(normal.x) > 0.5 // Hit from the side
+    ) {
+      player.isTouchingWall = true;
     }
-
-    handleCollisions (event: Matter.IEventCollision<Matter.Engine>) {
-        for (const player of this.players) {
-            player.isGrounded = false;
-            player.isTouchingWall = false;
-            player.wallDirection = direction.None;
-        }
-
-        for (const pair of event.pairs) {
-            const a = this.bodyToClass.get(pair.bodyA);
-            const b = this.bodyToClass.get(pair.bodyB);
-
-            if (a instanceof Player || b instanceof Player) {
-                const player = a instanceof Player ? a : b as Player;
-                const other = a instanceof Player ? b : a;
-                const normal = pair.collision.normal;
-
-                if (other instanceof Ground && normal.y < -0.5) {
-                    player.isGrounded = true;
-                }
-
-                if (other instanceof Wall && Math.abs(normal.x) > 0.5) {
-                    player.isTouchingWall = true;
-                    player.wallDirection = normal.x > 0 ? direction.Left : direction.Right;
-                }
-            }
-        }
-    }
-
-    handleCollisionEnd (event: Matter.IEventCollision<Matter.Engine>) {
-        for (const pair of event.pairs) {
-            const a = this.bodyToClass.get(pair.bodyA);
-            const b = this.bodyToClass.get(pair.bodyB);
-
-            if (a instanceof Player || b instanceof Player) {
-                const player = a instanceof Player ? a : b as Player;
-
-                player.isGrounded = false;
-                player.isTouchingWall = false;
-                player.wallDirection = direction.None;
-            }
-        }
-    }
+  }
 }
