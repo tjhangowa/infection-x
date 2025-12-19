@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "lib": ["ES2020"],          //  backend only — no DOM
+    "types": [],                 //  prevent loading browser types
+    "skipLibCheck": true         //  avoid type conflicts from node_modules
+  },
+  "include": ["server.ts"],
+  "exclude": ["node_modules", "src"]  // exclude frontend code entirely
+}
+
+

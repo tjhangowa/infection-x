@@ -1,0 +1,47 @@
+{"frames": {
+
+"lighting(Layer 1) _0001.png":
+{
+	"frame": {"x":0,"y":0,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
+},
+"lighting(Layer 1) _0002.png":
+{
+	"frame": {"x":256,"y":0,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
+},
+"lighting(Layer 1) _0003.png":
+{
+	"frame": {"x":0,"y":256,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
+},
+"lighting(Layer 1) _0004.png":
+{
+	"frame": {"x":256,"y":256,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256}
+}},
+"animations": {
+	"idle": ["lighting(Layer 1) _0001.png","lighting(Layer 1) _0002.png","lighting(Layer 1) _0003.png","lighting(Layer 1) _0004.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "speedpowerup.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c656761b75dfa38e3160ce4d0498cc3b:2ad4e3b41bb4d5eee1f1661683f72b09:ca9863ab5784fcfdbfb452b8be5c4473$"
+}
+}

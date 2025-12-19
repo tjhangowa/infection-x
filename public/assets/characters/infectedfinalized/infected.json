@@ -1,0 +1,169 @@
+{"frames": {
+
+"infected_eiframe_000 (1).png":
+{
+	"frame": {"x":0,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_eiframe_000 (2).png":
+{
+	"frame": {"x":128,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_eiframe_000 (3).png":
+{
+	"frame": {"x":256,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_eiframe_000 (4).png":
+{
+	"frame": {"x":384,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_erframe_003 (1).png":
+{
+	"frame": {"x":0,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_erframe_003 (2).png":
+{
+	"frame": {"x":128,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_erframe_003 (3).png":
+{
+	"frame": {"x":256,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_erframe_003 (4).png":
+{
+	"frame": {"x":384,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wiframe_003 (1).png":
+{
+	"frame": {"x":0,"y":256,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wiframe_003 (2).png":
+{
+	"frame": {"x":128,"y":256,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wiframe_003 (3).png":
+{
+	"frame": {"x":256,"y":256,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wiframe_003 (4).png":
+{
+	"frame": {"x":384,"y":256,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wrframe_003 (1).png":
+{
+	"frame": {"x":0,"y":384,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wrframe_003 (2).png":
+{
+	"frame": {"x":128,"y":384,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wrframe_003 (3).png":
+{
+	"frame": {"x":256,"y":384,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"infected_wrframe_003 (4).png":
+{
+	"frame": {"x":384,"y":384,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+}},
+"animations": {
+    "idle_east": [
+        "infected_eiframe_000 (1).png",
+        "infected_eiframe_000 (2).png",
+        "infected_eiframe_000 (3).png",
+        "infected_eiframe_000 (4).png"
+    ],
+
+    "run_east": [
+        "infected_erframe_003 (1).png",
+        "infected_erframe_003 (2).png",
+        "infected_erframe_003 (3).png",
+        "infected_erframe_003 (4).png"
+    ],
+
+    "idle_west": [
+        "infected_wiframe_003 (1).png",
+        "infected_wiframe_003 (2).png",
+        "infected_wiframe_003 (3).png",
+        "infected_wiframe_003 (4).png"
+    ],
+
+    "run_west": [
+        "infected_wrframe_003 (1).png",
+        "infected_wrframe_003 (2).png",
+        "infected_wrframe_003 (3).png",
+        "infected_wrframe_003 (4).png"
+    ]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "infected.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:b817bea9b1034eb23c7e8cb917d1cdac:5d4e19f82f38433fa4821ad1edd37a25:498f4c966905c82f2eee4aae5488fddc$"
+}
+}

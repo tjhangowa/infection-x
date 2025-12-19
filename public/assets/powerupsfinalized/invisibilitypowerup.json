@@ -1,0 +1,47 @@
+{"frames": {
+
+"invisbile (2)_0001.png":
+{
+	"frame": {"x":0,"y":0,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"invisbile (2)_0002.png":
+{
+	"frame": {"x":252,"y":0,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"invisbile (2)_0003.png":
+{
+	"frame": {"x":0,"y":252,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+},
+"invisbile (2)_0004.png":
+{
+	"frame": {"x":252,"y":252,"w":252,"h":252},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":252},
+	"sourceSize": {"w":252,"h":252}
+}},
+"animations": {
+	"idle": ["invisbile (2)_0001.png","invisbile (2)_0002.png","invisbile (2)_0003.png","invisbile (2)_0004.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "invisibilitypowerup.png",
+	"format": "RGBA8888",
+	"size": {"w":504,"h":504},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0514c67fde562cda7f43454912798d69:67d919b8cb19490a95d3ef759914bcb1:7994903e99aa0e89758aadb8d239ee9d$"
+}
+}
