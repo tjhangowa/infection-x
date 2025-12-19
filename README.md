@@ -1,6 +1,7 @@
-# 🧟 INFECTED: LAST STAND ⏱️
+# ![Logo](public/assets/logo/favicon-32x32.png) INFECTED: LAST STAND ![Logo](public/assets/logo/favicon-32x32.png) 
 
-## Status: Project In Development 
+
+## Status: Final Touches
 
 ## ☣️ The Outbreak: Project Overview
 
