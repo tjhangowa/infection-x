@@ -1,0 +1,608 @@
+{
+    "assets": {
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets": {
+            "isFolder": true,
+            "metaData": {},
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1763328993305,
+                "duration": 1.8626000000001568,
+                "success": true
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}": {
+            "isFolder": true,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1763328993305,
+                "duration": 2.28469999999993,
+                "success": true
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/logo-white.svg": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993306,
+                "duration": 5.781399999999849,
+                "success": true
+            },
+            "hash": "Wq9lMw"
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/logo-white.svg": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/logo-white.svg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds": {
+            "isFolder": true,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993307,
+                "duration": 1.2196000000001277,
+                "success": true
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/bgm-main.mp3": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993307,
+                "duration": 694.1799000000001,
+                "success": true
+            },
+            "hash": "IXGL8w"
+        },
+        ".assetpack/audio/main{m}/sounds/bgm-main.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/bgm-main.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/main{m}/sounds/bgm-main.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/bgm-main.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/bgm-main.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/bgm-main.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-hover.wav": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993308,
+                "duration": 495.10220000000004,
+                "success": true
+            },
+            "hash": "P9yd"
+        },
+        ".assetpack/audio/main{m}/sounds/sfx-hover.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-hover.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/sfx-hover.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/sfx-hover.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/main{m}/sounds/sfx-hover.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-hover.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/sfx-hover.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/sfx-hover.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-press.wav": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993308,
+                "duration": 497.86879999999996,
+                "success": true
+            },
+            "hash": "59LMfg"
+        },
+        ".assetpack/audio/main{m}/sounds/sfx-press.mp3": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-press.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/sfx-press.mp3": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/sfx-press.mp3",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/audio/main{m}/sounds/sfx-press.ogg": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/sounds/sfx-press.wav",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/sounds/sfx-press.ogg": {
+            "isFolder": false,
+            "transformParent": ".assetpack/audio/main{m}/sounds/sfx-press.ogg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}": {
+            "isFolder": true,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}",
+            "metaData": {
+                "tps": true
+            },
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993308,
+                "duration": 390.6993,
+                "success": true
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}/button.png": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "33gC"
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}/icon-pause.png": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "6xk80g"
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}/icon-settings.png": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "xq0X7Q"
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}/rounded-rectangle.png": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {},
+            "hash": "fUycdg"
+        },
+        ".assetpack/texture-packer/main{m}/ui.png": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/main{m}/ui.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/main{m}/ui.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/main{m}/ui.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/main{m}/ui.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/main{m}/ui.json": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/main{m}/ui.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/main{m}/ui.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/main{m}/ui.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/main{m}/ui.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/main{m}/ui.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/main{m}/ui.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/main{m}/ui.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/main{m}/ui.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer/main{m}/ui@0.5x.png": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {
+                "mIgnore": true,
+                "nomip": true
+            },
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/main{m}/ui@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui@0.5x.png": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/main{m}/ui@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/compress/main{m}/ui@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui@0.5x.png",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui@0.5x.webp": {
+            "isFolder": false,
+            "transformParent": ".assetpack/compress/main{m}/ui@0.5x.webp",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true,
+                "mIgnore": true,
+                "nomip": true
+            },
+            "transformData": {}
+        },
+        ".assetpack/texture-packer/main{m}/ui@0.5x.json": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/main{m}/ui{tps}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/main{m}/ui@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/main{m}/ui@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/main{m}/ui@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui@0.5x.png.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/main{m}/ui@0.5x.png.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/texture-packer-compress/main{m}/ui@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer/main{m}/ui@0.5x.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        ".assetpack/json/main{m}/ui@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/texture-packer-compress/main{m}/ui@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/main/ui@0.5x.webp.json": {
+            "isFolder": false,
+            "transformParent": ".assetpack/json/main{m}/ui@0.5x.webp.json",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true,
+                "tps": true
+            },
+            "transformData": {
+                "page": 0
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/preload{m}": {
+            "isFolder": true,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets",
+            "metaData": {
+                "m": true
+            },
+            "inheritedMetaData": {},
+            "transformData": {},
+            "stats": {
+                "date": 1763328993311,
+                "duration": 0.03669999999988249,
+                "success": true
+            }
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/preload{m}/logo.svg": {
+            "isFolder": false,
+            "parent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/preload{m}",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {},
+            "stats": {
+                "date": 1763328993311,
+                "duration": 0.6350999999999658,
+                "success": true
+            },
+            "hash": "LmftHw"
+        },
+        "C:/Users/thisi/Documents/GitHub/pixi-project/public/assets/preload/logo.svg": {
+            "isFolder": false,
+            "transformParent": "C:/Users/thisi/Documents/GitHub/pixi-project/raw-assets/preload{m}/logo.svg",
+            "metaData": {},
+            "inheritedMetaData": {
+                "m": true
+            },
+            "transformData": {}
+        }
+    }
+}

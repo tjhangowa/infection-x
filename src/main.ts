@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { Application, Assets, Sprite } from "pixi.js";
 
 (async () => {
@@ -33,5 +34,20 @@ import { Application, Assets, Sprite } from "pixi.js";
     bunny.rotation += 0.1 * time.deltaTime;
   });
 })();
+=======
+import "./network/socket";
+import { App } from "./core/app";
+import { SceneManager } from "./core/SceneManager";
+//import { GameMapScene } from "./scenes/GameMapScene";
+import { WaitingLobbyScene } from "./scenes/WaitingLobbyScene"; // Change import
+import "./style.css";
+
+async function main() {
+  await App.init();
+  await SceneManager.changeScene(new WaitingLobbyScene());
+}
+
+main();
+>>>>>>> Stashed changes
 
 //test pull
