@@ -1,4 +1,29 @@
-import { Container, Sprite, Text, Assets } from "pixi.js";
+iate background?: Sprite;
+  private title?: Text;
+
+  private infoButton?: Container;
+  private startButton?: Container;
+  private settingsButton?: Container;
+
+  private resizeHandler = () => this.layout();
+
+  constructor() {
+    super();
+    this.sortableChildren = true;
+  }
+
+  async load() {
+    await this.loadBackground();
+    await this.loadFont();
+    ModalManager.init(this);
+    this.createTitle();
+    this.createButtons();
+    this.layout();
+
+    window.addEventListener("resize", this.resizeHandler);
+  }
+
+mport { Container, Sprite, Text, Assets } from "pixi.js";
 import { App } from "../core/app";
 import { BaseScene } from "../scenes/BaseScene";
 import { createTextButton } from "../ui/TextButton";
