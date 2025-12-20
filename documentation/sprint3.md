@@ -1,0 +1,11 @@
+# Functional Requirement (Sprint 3)
+- FR-3: The system shall ensure the Main Menu scene is fully polished, including the integration of background music and all finalized visual assets.
+- FR-5: The system shall enable the Settings menu to control the volume level of the main menu background music, reflecting changes in real-time.
+- FR-6: The system shall reliably execute the transition logic when the 'Start' button is pressed, moving the user seamlessly from the Main Menu to the Waiting Lobby scene.
+- FR-7: Upon entering the Lobby scene, the system shall correctly initialize each player's network identity by assigning a unique ID and setting their initial team status.
+- FR-13: The system shall resolve all identified camera errors to guarantee the player remains perfectly centered and non-jittery within the viewport, without showing areas outside the map boundaries.
+- FR-16: The system shall ensure the physics engine is stable by eliminating bugs that cause objects to clip through platforms or produce incorrect collision responses during player movement.
+- FR-18: The system shall implement the Infection mechanic logic, triggering a network broadcast to convert a Survivor into an Infected player upon successful contact.
+- FR-23: The system shall correct physics inconsistencies, ensuring that gravity, object stability, and character movement are predictable and free from unintended glitches or sudden velocity changes.
+- FR-25: The system shall fix all bugs related to camera smoothness, ensuring the dynamic view follows the player with consistent, non-jarring interpolation and appropriate zoom levels.
+- FR-30: The system shall implement the Parrying mechanic, allowing the Survivor to press a specific input within a short window to deflect an incoming infection attempt and grant temporary safety.
