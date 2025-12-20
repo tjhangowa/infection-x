@@ -1,0 +1,56 @@
+server {
+    server_name infectionx.io;
+
+    root /var/www/infectionx/dist;
+    index index.html;
+
+    # Serve frontend SPA
+    location / {
+        try_files $uri /index.html;
+    }
+
+    # Proxy WebSocket/API requests to Node.js backend
+    location /socket.io/ {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+	
+	proxy_read_timeout 3600;
+	proxy_send_timeout 3600;
+    }
+
+    location /api/ {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+       
+    }
+
+    # Optional: gzip compression
+    gzip on;
+    gzip_types text/plain application/javascript text/css application/json image/svg+xml;
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/infectionx.io/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/infectionx.io/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+    if ($host = infectionx.io) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name infectionx.io;
+    return 404; # managed by Certbot
+
+
+}
