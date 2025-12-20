@@ -24,7 +24,12 @@ export interface MoveData {
   y: number;
 }
 
-export const socket = io("/", {
+// Determine the correct URL based on where the game is running
+// If we are on localhost, look for port 3000.
+// If we are on the VPS (production), use the default relative path.
+const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+const URL = isLocal ? "http://127.0.0.1:3000" : "/";
+export const socket = io(URL, {
   path: "/socket.io",
   transports: ["websocket"],
 });
