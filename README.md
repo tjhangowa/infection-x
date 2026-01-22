@@ -1,112 +1,95 @@
-public/
-Contains all static assets used by the game:
- - Sprite images (characters, power-ups)
- - Map backgrounds
- - UI images
- - Animation layers
+# 🧟 INFECTED: LAST STAND
 
-scripts/convertplatforms.js
- - Converts platform rotation to platform steps.
+> **A fast-paced, free-for-all multiplayer survival game.**
 
-src/actors/PlayerActor.ts
- - Defines player entity that interacts with physics and gameplay systems.
+**Project Type:** Software Engineering Course Final Project  
+**Genre:** Multiplayer Survival / Platformer  
+**Status:** Finished 
 
-src/characters
- Defines all playable character sprites and animations.
- - baseCharacter.ts 
-    - Base class shared by all characters. Handles:
- - Tom.ts, Jenny.ts, Mike.ts
-    - Survivor character implementations extending BaseCharacter.
- - Infected.ts
-    - Infected/zombie character implementation 
+---
 
-src/core
-Core engine-level systems used throughout the game.
- - camera/Camera2D.ts
-    - Implements player-centered camera
- - physics/CollisionManager.ts
-    - Centralized collision handling using Matter.js
- - app.ts
-    - Initializes the pixi.js application
- - SceneManager.ts
-    - Handles scene transitions and ensures only the active scene is rendered
- - PowerUpManager.ts
-    - Handles spawning, applying, tracking, and removing power-ups.
+## ☣️ The Outbreak: Project Overview
 
-src/input/keyboard.ts
- - Centralized keyboard input handler
+**INFECTED: LAST STAND** is a fast-paced, free-for-all multiplayer survival game developed as a final project for our Software Engineering course. Set in a desolate urban environment, the game uses a dynamic, real-time infection mechanic to pit four players against each other.
 
-src/network
-Handles all multiplayer networking logic.
- - socket.ts
-    - Client-side socket.io connection
- - multiplayer.ts
-    - manages remote player creation, player synchronization, join/leave events
+The core premise is simple: **Survival is a race against the clock and the contagion.**
 
-src/objects
-Game world objects
-- Platform.ts
-    - Represents physical playforms in the map, combining visuals and physics
- - terrain/
-    - stores base classes for terrain, ground, and wall
+### 📝 Game Objective
 
-src/powerups
-power-up system implementation
- - base/PowerUp.ts
-    - Abstract base class for all power-ups.
- - base/PowerUpTypes.ts
-    - Enum defining available power-up types
- - implementations/
-    - implementation of speed and invisibility power-ups
+* **The Infected:** One player starts as the Infected. Their sole mission is to tag and infect every other survivor before the timer runs out.
+* **The Survivors:** Three players start as Survivors. They must evade the Infected until the designated time limit expires.
 
-src/scene
-Each scene represents a major game state.
- - BaseScene.ts
-    - Base class for all scenes.
- - MainMenuScene.ts
-    - Displays title screen and main menu buttons.
- - WaitingLobbyScene.ts
-    - Lobby where players wait for others to join before the match starts.
- - DemoMapScene.ts
-    - Development/testing scene for maps and mechanics.
- - GameMapScene.ts
-    Main gameplay scene.
+### 🏆 Win Conditions
 
-src/ui
-All user interface components.
- - InfoModal.ts
-    - Displays game instructions and information.
- - SettingsModal.ts
-    - Settings UI (volume, controls).
- - ModalManager.ts
-    - Central manager for opening/closing UI modals.
- - GameHud.ts
-    - In-game HUD displaying status information.
- - CountdownUI.ts
-    - Displays match countdown timers.
- - InfectionIndicator.ts
-    - Visual indicator for infection attempts.
- - ParryUI.ts
-    - Displays parry cooldown and status.
- - textbutton.ts
-    - Reusable UI button component.
+1.  **The Infected Win:** If all players become Infected before the timer hits zero.
+2.  **The Survivors Win:** If the timer runs out with any Survivor remaining healthy.
 
-main.ts
-Initializes the app, sets up scene manager, starts game
+---
 
-server.ts
-Authoritative Node.js server.
- - Tracks player state
- - Validates movement
- - Broadcasts updates
+## 🛠️ Tech Stack & Architecture
 
-vite.config.ts
-Build configuration for Vite 
+This project is built using a modern TypeScript stack, leveraging **Pixi.js** for rendering, **Matter.js** for physics, and **Socket.io** for real-time multiplayer networking.
 
-tsconfig.json / tsconfig.server.json
-TypeScript configuration for client and server builds.
+### 📂 Directory Structure
 
-package.json / package-lock.json
-Project dependencies and scripts.
+The project is organized into a client-server architecture. Below is the breakdown of the codebase:
 
+#### **Core Engine (`src/core`)**
+The backbone of the game engine, handling the loop, rendering, and physics.
+* `app.ts`: Initializes the Pixi.js application.
+* `SceneManager.ts`: Handles scene transitions and ensures only the active scene is rendered.
+* `physics/CollisionManager.ts`: Centralized collision handling using Matter.js.
+* `camera/Camera2D.ts`: Implements player-centered camera.
+* `PowerUpManager.ts`: Handles spawning, applying, tracking, and removing power-ups.
 
+#### **Networking (`src/network` & Root)**
+Handles real-time state synchronization between clients.
+* `server.ts` *(Root)*: Authoritative Node.js server. Tracks player state, validates movement, and broadcasts updates.
+* `socket.ts`: Client-side socket.io connection.
+* `multiplayer.ts`: Manages remote player creation, player synchronization, and join/leave events.
+
+#### **Actors & Characters (`src/actors`, `src/characters`)**
+Entities that interact with the game world.
+* `PlayerActor.ts`: Defines player entity that interacts with physics and gameplay systems.
+* `baseCharacter.ts`: Base class shared by all characters.
+* `Tom.ts`, `Jenny.ts`, `Mike.ts`: Survivor character implementations.
+* `Infected.ts`: Infected/zombie character implementation.
+
+#### **Game World & Objects (`src/objects`, `src/scene`)**
+* **Scenes:**
+    * `MainMenuScene.ts`: Displays title screen and main menu buttons.
+    * `WaitingLobbyScene.ts`: Lobby where players wait for others to join.
+    * `GameMapScene.ts`: Main gameplay scene.
+    * `DemoMapScene.ts`: Development/testing scene for maps and mechanics.
+* **Objects:**
+    * `Platform.ts`: Represents physical platforms in the map (visuals + physics).
+    * `terrain/`: Stores base classes for terrain, ground, and walls.
+
+#### **UI & UX (`src/ui`)**
+User interface components overlaying the game.
+* `GameHud.ts` & `CountdownUI.ts`: Displays status info and match timers.
+* `InfoModal.ts` & `SettingsModal.ts`: Displays instructions and settings (volume, controls).
+* `ModalManager.ts`: Central manager for opening/closing UI modals.
+* `InfectionIndicator.ts`: Visual indicator for infection attempts.
+* `ParryUI.ts`: Displays parry cooldown and status.
+* `textbutton.ts`: Reusable UI button component.
+
+#### **Power-Ups (`src/powerups`)**
+* `base/PowerUp.ts`: Abstract base class for all power-ups.
+* `base/PowerUpTypes.ts`: Enum defining available power-up types.
+* `implementations/`: Specific logic for abilities (e.g., speed, invisibility).
+
+#### **Assets & Utilities**
+* `public/`: Static assets (Sprites, Maps, UI images).
+* `src/input/keyboard.ts`: Centralized keyboard input handler.
+* `scripts/convertplatforms.js`: Utility to convert platform rotation to platform steps.
+
+---
+
+## ⚙️ Configuration & Setup
+
+* **Build Tool:** Vite (`vite.config.ts`)
+* **Language:** TypeScript (`tsconfig.json`, `tsconfig.server.json`)
+* **Dependencies:** Managed via `package.json`
+
+*Developed as a Final Project for Software Engineering.*
